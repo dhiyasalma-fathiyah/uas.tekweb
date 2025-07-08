@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplikasi Cuaca Real-Time</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="main-wrapper">
+        <div class="left-panel">
+            <div class="header">
+                <i class="fas fa-cloud-sun weather-app-icon"></i>
+                <span>forecast</span>
+            </div>
+
+            <div class="current-location">
+                <i class="fas fa-map-marker-alt"></i>
+                <span id="currentLocationText">Current Location: Unknown</span>
+            </div>
+
+            <div class="main-forecast-text">
+                <h1>The Only Weather Forecast You Need</h1>
+                <div class="location-search">
+                    <input type="text" id="cityInput" placeholder="Enter location...">
+                    <button id="searchButton"><i class="fas fa-search"></i></button>
+                </div>
+            </div>
+
+            <div id="weatherResult" class="weather-result-display">
+                <p class="placeholder-text">Enter a city to get weather forecast.</p>
+            </div>
+        </div>
+
+        <div class="right-panel">
+            <div class="tabs">
+                <span class="active">Weather</span>
+            </div>
+
+            <h2>Today</h2>
+            <div class="current-weather-summary">
+                <div class="main-temp-icon">
+                    <p class="temperature-large" id="todayTemp">--°C</p>
+                    <i class="fas fa-cloud weather-icon-today" id="todayIcon"></i>
+                </div>
+                <p class="condition-text" id="todayCondition">Loading...</p>
+                <p class="date-today" id="todayDate">---, --- --</p>
+                <div class="details-grid">
+                    <p>Realfeel: <span id="todayRealfeel">--°C</span></p>
+                    <p>Humidity: <span id="todayHumidity">--%</span></p>
+                    <p>UV Index: <span id="todayUV">--</span></p>
+                    <p>Cloud Cover: <span id="todayCloudCover">--%</span></p>
+                    <p>Visibility: <span id="todayVisibility">--km</span></p>
+                    <p>Wind: <span id="todayWind">-- m/s</span></p>
+                </div>
+            </div>
+
+            <h2>Riwayat Pencarian</h2>
+            <div id="historyTableContainer" class="history-table-container">
+                <table id="historyTable">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Nama Kota</th>
+                            <th>Waktu Pencarian</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
